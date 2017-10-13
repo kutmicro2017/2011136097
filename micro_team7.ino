@@ -52,7 +52,7 @@ void loop() {
   digitalWrite(Up_R, HIGH);
   */
   CheckTime = millis();
-  SwichLoop(Up_G, Up_Y, Up_R, CheckTime);
+  SwitchLoop(Up_G, Up_Y, Up_R, CheckTime);
   digitalWrite(Left_R, LOW);
   digitalWrite(Left_G, HIGH);
   
@@ -84,7 +84,7 @@ void BlinkLED(const int YellowLED) {  //yellow신호 점멸
    }
 }
 
-void SwichLoop(int GLight, int YLight, int RLight, long CheckTime) {
+void SwitchLoop(int GLight, int YLight, int RLight, long CheckTime) {
   while(interval > (millis() - CheckTime)) {  //interval 시간 동안 진행
     if(state1 == false) { //위측 신호등이 녹색등일 동안에 스위치를 누를 경우 진행
       delay(3000);
